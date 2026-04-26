@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Johanna – Esthéticienne, Praticienne Bien-être & Beauté à domicile. Drainage lymphatique, Kobido, soins beauté à Baillargues et alentours." />
+  <meta name="keywords" content="esthéticienne, bien-être, massage, drainage lymphatique, kobido, beauté, Baillargues, domicile, soin visage" />
+  <meta property="og:title" content="Johanna – Esthéticienne & Praticienne Bien-être" />
+  <meta property="og:description" content="La beauté par le soin – Soins bien-être & beauté à domicile, en clientèle et pour vos événements." />
+  <meta property="og:image" content="assets/retour_a_soi.png" />
+  <title>Johanna – Esthéticienne & Praticienne Bien-être | La beauté par le soin</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Lenis smooth scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ── Grain texture overlay ──────────────────────────────────── -->
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<!-- ── Mobile menu ────────────────────────────────────────────── -->
+<nav class="mobile-menu" aria-label="Menu mobile">
+  <button class="mobile-close" aria-label="Fermer le menu">✕</button>
+  <a href="#intro">À propos</a>
+  <a href="#prestations">Prestations</a>
+  <a href="#evenementiel">Événements</a>
+  <a href="#carte-cadeau">Carte cadeau</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════════ -->
+<header id="navbar" role="banner">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="#hero" class="nav-logo" aria-label="Retour en haut">
+        <img src="assets/logo.jpg" alt="Logo Johanna" width="44" height="44" />
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Johanna</span>
+          <span class="nav-logo-sub">Esthéticienne · Praticienne Bien-être</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#intro">À propos</a></li>
+        <li><a href="#prestations">Prestations</a></li>
+        <li><a href="#bienfaits">Bienfaits</a></li>
+        <li><a href="#evenementiel">Événements</a></li>
+        <li><a href="#contact" class="btn nav-cta">Réserver</a></li>
+      </ul>
+
+      <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════════ -->
+<section id="hero" role="banner" aria-label="Bienvenue">
+
+  <div class="hero-bg" aria-hidden="true">
+    <img
+      src="assets/retour_a_soi.png"
+      alt=""
+      fetchpriority="high"
+      width="1920"
+      height="1080"
+    />
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-vignette"></div>
+  </div>
+
+  <div class="hero-content">
+    <span class="hero-eyebrow">la beauté par le soin</span>
+
+    <h1 class="hero-title">
+      Prenez le temps<br /><em>d'un instant…</em>
+    </h1>
+
+    <p class="hero-subtitle">
+      Soins bien-être &amp; beauté à domicile,<br />
+      en clientèle et pour vos événements
+    </p>
+
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Réserver un soin</a>
+      <a href="#prestations" class="btn btn-secondary">Découvrir les prestations</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <div class="scroll-mouse"></div>
+    <span>Découvrir</span>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     INTRO / À PROPOS
+════════════════════════════════════════════════════════════════ -->
+<section id="intro" aria-label="À propos de Johanna">
+  <div class="container">
+    <div class="intro-inner">
+
+      <div class="intro-visual reveal">
+        <div class="intro-img-wrap">
+          <img
+            src="assets/portrait.jpg"
+            alt="Johanna, esthéticienne et praticienne bien-être"
+            loading="lazy"
+          />
+        </div>
+        <div class="intro-img-deco">
+          <img src="assets/cozy_lampe.png" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="intro-text-side">
+        <span class="section-tag reveal">Bonjour, je suis</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          Johanna<br /><em>Esthéticienne &amp; Praticienne</em>
+        </h2>
+
+        <div class="gold-line reveal reveal-delay-2"></div>
+
+        <blockquote class="intro-text-quote reveal reveal-delay-2">
+          « Créer cet espace, c'est offrir une parenthèse.<br />
+          Un endroit où l'on peut souffler, ralentir,<br />
+          se retrouver. »
+        </blockquote>
+
+        <p class="section-text reveal reveal-delay-3">
+          Esthéticienne de formation et praticienne bien-être passionnée, j'interviens à domicile, en clientèle et lors de vos événements pour vous offrir des soins doux, adaptés et profondément ressourçants.
+        </p>
+
+        <p class="section-text reveal reveal-delay-4" style="margin-top: 1rem;">
+          Chaque soin est une invitation à ralentir, à vous retrouver, à prendre soin de vous — vraiment.
+        </p>
+
+        <span class="intro-signature reveal reveal-delay-5">Johanna 🤍</span>
+
+        <div class="reveal reveal-delay-5" style="margin-top: 2rem;">
+          <a href="#prestations" class="btn btn-outline">Découvrir mes soins</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     STORYTELLING STRIP
+════════════════════════════════════════════════════════════════ -->
+<section id="story" aria-label="Galerie ambiance" aria-hidden="true">
+  <div class="story-grid">
+
+    <div class="story-item">
+      <img src="assets/lachez_prise.png" alt="Moment de lâcher-prise" loading="lazy" />
+      <div class="story-item-overlay"></div>
+      <div class="story-item-text">
+        <p>Lâcher prise, enfin…</p>
+      </div>
+    </div>
+
+    <div class="story-item">
+      <img src="assets/soin_domicile.png" alt="Soin à domicile" loading="lazy" />
+      <div class="story-item-overlay"></div>
+      <div class="story-item-text">
+        <p>Le soin vient à vous, doucement.</p>
+      </div>
+    </div>
+
+    <div class="story-item">
+      <img src="assets/cozy_lampe.png" alt="Ambiance cocooning" loading="lazy" />
+      <div class="story-item-overlay"></div>
+      <div class="story-item-text">
+        <p>Un cocon de douceur et de lumière.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MOMENT / CITATION
+════════════════════════════════════════════════════════════════ -->
+<section id="moment" aria-label="Une parenthèse pour soi">
+  <div class="container">
+    <div class="moment-inner">
+      <span class="section-tag reveal">Une invitation à s'arrêter</span>
+
+      <div class="gold-line reveal"></div>
+
+      <p class="moment-text reveal">
+        On pense souvent qu'il faut <strong>tenir</strong>. Continuer.<br />
+        Être forte, coûte que coûte.<br /><br />
+        Mais parfois, le plus beau cadeau que l'on puisse se faire,<br />
+        c'est simplement de <strong>s'arrêter</strong>.<br /><br />
+        <em>Respirer. Et revenir à soi.</em>
+      </p>
+
+      <div class="reveal" style="margin-top: 2.5rem;">
+        <a href="#contact" class="btn btn-outline">Prendre soin de moi</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ILLUSTRATIONS STRIP
+════════════════════════════════════════════════════════════════ -->
+<div class="illus-strip" aria-hidden="true">
+  <div class="illus-strip-item">
+    <img src="assets/illustration1.png" alt="" loading="lazy" />
+  </div>
+  <div class="illus-strip-item">
+    <img src="assets/illustration2.png" alt="" loading="lazy" />
+  </div>
+  <div class="illus-strip-item">
+    <img src="assets/illustration3.png" alt="" loading="lazy" />
+  </div>
+  <div class="illus-strip-item">
+    <img src="assets/illustration4.png" alt="" loading="lazy" />
+  </div>
+  <div class="illus-strip-item">
+    <img src="assets/illustration5.png" alt="" loading="lazy" />
+  </div>
+  <div class="illus-strip-item">
+    <img src="assets/illustration6.png" alt="" loading="lazy" />
+  </div>
+  <div class="illus-strip-item">
+    <img src="assets/illustration7.png" alt="" loading="lazy" />
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRESTATIONS
+════════════════════════════════════════════════════════════════ -->
+<section id="prestations" aria-label="Mes prestations">
+  <div class="container">
+
+    <div class="prestations-header">
+      <span class="section-tag reveal">Mes soins</span>
+      <h2 class="section-title reveal reveal-delay-1">
+        Des soins pensés<br /><em>pour vous ressourcer</em>
+      </h2>
+      <div class="gold-line reveal reveal-delay-2"></div>
+      <p class="section-text reveal reveal-delay-2" style="margin: 0 auto; text-align: center;">
+        Chaque prestation est une expérience sur mesure, adaptée à vos besoins du moment.
+      </p>
+    </div>
+
+    <div class="prestations-grid">
+
+      <!-- Drainage -->
+      <article class="prestation-card" data-reveal="up">
+        <div class="card-img">
+          <img src="assets/drainage.png" alt="Drainage lymphatique méthode Vodder" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Soin du corps</p>
+          <h3 class="card-title">Drainage lymphatique</h3>
+          <p class="card-desc">Douceur, légèreté, équilibre</p>
+          <p class="card-text">
+            Un soin doux et profond par la méthode Vodder. Il stimule la lymphe, élimine les toxines et apaise les sensations de jambes lourdes. Au-delà du physique, c'est un véritable lâcher-prise pour le corps et l'esprit.
+          </p>
+          <a href="#contact" class="btn btn-outline card-btn">En savoir plus</a>
+        </div>
+      </article>
+
+      <!-- Kobido -->
+      <article class="prestation-card" data-reveal="up">
+        <div class="card-img">
+          <img src="assets/kobido.png" alt="Kobido massage du visage japonais" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Soin du visage</p>
+          <h3 class="card-title">Kobido</h3>
+          <p class="card-desc">L'art japonais du massage du visage</p>
+          <p class="card-text">
+            Un rituel de beauté venu du Japon alliant technicité et douceur. Des gestes précis tonifient les muscles, redonnent éclat à la peau et apaisent profondément les traits et l'esprit.
+          </p>
+          <a href="#contact" class="btn btn-outline card-btn">En savoir plus</a>
+        </div>
+      </article>
+
+      <!-- Soins bien-être -->
+      <article class="prestation-card" data-reveal="up">
+        <div class="card-img">
+          <img src="assets/soin_domicile.png" alt="Soin bien-être et beauté" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Bien-être &amp; beauté</p>
+          <h3 class="card-title">Soins bien-être &amp; beauté</h3>
+          <p class="card-desc">Un moment pour soi, adapté à vos besoins</p>
+          <p class="card-text">
+            Un soin, c'est un retour à soi. Un instant pour relâcher, respirer, se retrouver. Le corps se détend… et l'esprit suit. Chaque protocole est personnalisé selon vos envies du moment.
+          </p>
+          <a href="#contact" class="btn btn-outline card-btn">En savoir plus</a>
+        </div>
+      </article>
+
+      <!-- Soins des pieds -->
+      <article class="prestation-card" data-reveal="up">
+        <div class="card-img">
+          <img src="assets/soins_pied.png" alt="Soins des pieds" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Soin du corps</p>
+          <h3 class="card-title">Soins des pieds</h3>
+          <p class="card-desc">Soin de soi jusqu'au bout</p>
+          <p class="card-text">
+            Ils nous portent chaque jour et on oublie souvent de prendre soin d'eux. Prendre soin de ses pieds, c'est offrir à son corps un moment de bien-être complet — jusqu'au bout de soi.
+          </p>
+          <a href="#contact" class="btn btn-outline card-btn">En savoir plus</a>
+        </div>
+      </article>
+
+      <!-- Carte cadeau preview -->
+      <article class="prestation-card" data-reveal="up" style="grid-column: span 1;">
+        <div class="card-img">
+          <img src="assets/carte_cadeau.png" alt="Carte cadeau soin bien-être" loading="lazy" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">À offrir</p>
+          <h3 class="card-title">Carte cadeau</h3>
+          <p class="card-desc">Offrir un moment de douceur</p>
+          <p class="card-text">
+            Le plus beau des cadeaux : un moment suspendu. Offrez à une personne chère une parenthèse de douceur, de bien-être et de lâcher-prise. À personnaliser selon vos envies.
+          </p>
+          <a href="#carte-cadeau" class="btn btn-outline card-btn">En savoir plus</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     BIENFAITS
+════════════════════════════════════════════════════════════════ -->
+<section id="bienfaits" aria-label="Les bienfaits des soins">
+  <div class="container">
+    <div class="bienfaits-inner">
+
+      <div class="bienfaits-visual">
+        <div class="bienfaits-img-main reveal">
+          <img src="assets/presentation_johanna.png" alt="Johanna en consultation bien-être" loading="lazy" />
+        </div>
+        <div class="bienfaits-img-float reveal reveal-delay-2">
+          <img src="assets/cozy_lampe.png" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="bienfaits-text-side">
+        <span class="section-tag reveal">Ce que vous ressentez</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          Les bienfaits<br /><em>d'un soin bien vécu</em>
+        </h2>
+
+        <div class="gold-line reveal reveal-delay-2" style="margin: 1.5rem 0;"></div>
+
+        <p class="section-text reveal reveal-delay-2">
+          Bien au-delà de l'esthétique, chaque soin agit en profondeur — sur le corps, sur l'esprit, sur ce souffle intérieur dont on a tant besoin.
+        </p>
+
+        <div class="bienfaits-grid">
+
+          <div class="bienfait-item reveal reveal-delay-1">
+            <div class="bienfait-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="bienfait-label">Relâche les tensions</span>
+          </div>
+
+          <div class="bienfait-item reveal reveal-delay-2">
+            <div class="bienfait-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <span class="bienfait-label">Apaise le mental</span>
+          </div>
+
+          <div class="bienfait-item reveal reveal-delay-2">
+            <div class="bienfait-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="bienfait-label">Reconnecte à soi</span>
+          </div>
+
+          <div class="bienfait-item reveal reveal-delay-3">
+            <div class="bienfait-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <span class="bienfait-label">Ressource &amp; revitalise</span>
+          </div>
+
+          <div class="bienfait-item reveal reveal-delay-3">
+            <div class="bienfait-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <span class="bienfait-label">Légèreté</span>
+          </div>
+
+          <div class="bienfait-item reveal reveal-delay-4">
+            <div class="bienfait-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </div>
+            <span class="bienfait-label">Éclat naturel</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     LIEUX D'INTERVENTION
+════════════════════════════════════════════════════════════════ -->
+<section id="lieux" aria-label="Secteur d'intervention">
+  <div class="container">
+
+    <div class="lieux-header">
+      <span class="section-tag reveal">Où j'interviens</span>
+      <h2 class="section-title reveal reveal-delay-1">
+        Le soin vient<br /><em>à vous</em>
+      </h2>
+      <div class="gold-line reveal reveal-delay-2"></div>
+      <p class="section-text reveal reveal-delay-2" style="margin: 0 auto; text-align: center;">
+        Je me déplace pour que votre moment de bien-être soit parfaitement serein, dans votre environnement.
+      </p>
+    </div>
+
+    <div class="lieux-grid">
+
+      <div class="lieu-card">
+        <div class="lieu-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 class="lieu-title">À domicile</h3>
+        <p class="lieu-text">
+          Dans votre cocon, en confiance. Après le soin, il n'y a rien à faire — juste rester chez vous et savourer.
+        </p>
+      </div>
+
+      <div class="lieu-card">
+        <div class="lieu-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3 class="lieu-title">En clientèle</h3>
+        <p class="lieu-text">
+          Je m'adapte à votre espace et à vos contraintes pour vous offrir la meilleure expérience possible.
+        </p>
+      </div>
+
+      <div class="lieu-card">
+        <div class="lieu-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="lieu-title">Événementiel</h3>
+        <p class="lieu-text">
+          EVJF, anniversaires, soirées entre amies, entreprises. Une parenthèse bien-être pour vos événements.
+        </p>
+      </div>
+
+      <div class="lieu-card">
+        <div class="lieu-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3 class="lieu-title">Secteur</h3>
+        <p class="lieu-text">
+          Baillargues et ses alentours. N'hésitez pas à me contacter pour vérifier votre zone.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ÉVÉNEMENTIEL
+════════════════════════════════════════════════════════════════ -->
+<section id="evenementiel" aria-label="Événements bien-être">
+  <div class="event-bg-deco" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="event-inner">
+
+      <div class="event-text-side">
+        <span class="section-tag reveal">Événements</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          Une parenthèse bien-être<br /><em>pour vos événements</em>
+        </h2>
+        <div class="gold-line reveal reveal-delay-2" style="margin: 1.5rem 0;"></div>
+
+        <p class="event-text-body reveal reveal-delay-2">
+          Offrez à vos invités un moment de douceur et de lâcher-prise lors de vos événements privés ou professionnels. Des soins personnalisés selon le lieu, le nombre de participantes et l'ambiance souhaitée.
+        </p>
+
+        <div class="event-tags reveal reveal-delay-3">
+          <span class="event-tag">EVJF</span>
+          <span class="event-tag">Anniversaires</span>
+          <span class="event-tag">Soirées entre amies</span>
+          <span class="event-tag">Événements d'entreprise</span>
+          <span class="event-tag">Journées bien-être</span>
+          <span class="event-tag">Prestations sur mesure</span>
+        </div>
+
+        <div class="reveal reveal-delay-4">
+          <a href="#contact" class="btn btn-primary">Créer mon événement bien-être</a>
+        </div>
+      </div>
+
+      <div class="event-visual-side reveal reveal-delay-2">
+        <div class="event-visual-grid">
+          <div class="ev1">
+            <img src="assets/tablette1.jpg" alt="Ambiance événement bien-être" loading="lazy" />
+          </div>
+          <div class="ev2">
+            <img src="assets/tablette2.jpg" alt="Soin lors d'un événement" loading="lazy" />
+          </div>
+          <div class="ev3">
+            <img src="assets/tablette3.jpg" alt="Moment de détente entre amies" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CARTE CADEAU
+════════════════════════════════════════════════════════════════ -->
+<section id="carte-cadeau" aria-label="Carte cadeau">
+  <div class="cadeau-bg-deco" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="cadeau-inner">
+
+      <div class="cadeau-text">
+        <span class="section-tag reveal">À offrir</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          Offrez un moment<br /><em style="color: var(--gold-light);">suspendu</em>
+        </h2>
+        <div class="gold-line reveal reveal-delay-2" style="margin: 1.5rem 0; background: linear-gradient(90deg, transparent, rgba(201,169,110,0.6), transparent);"></div>
+
+        <p class="cadeau-body reveal reveal-delay-2">
+          Un cadeau qui fait du bien, à offrir pour une parenthèse de douceur. Que ce soit pour un anniversaire, une naissance, un moment difficile ou simplement pour dire « je pense à toi » — une carte cadeau Johanna, c'est un instant de bien-être à vivre pleinement.
+        </p>
+
+        <div class="reveal reveal-delay-3">
+          <a href="#contact" class="btn btn-primary">Demander une carte cadeau</a>
+        </div>
+      </div>
+
+      <div class="cadeau-visual reveal reveal-delay-2">
+        <div class="cadeau-img">
+          <img src="assets/carte_cadeau.png" alt="Carte cadeau Soin Douceur by Johanna" loading="lazy" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ILLUSTRATIONS STRIP 2
+════════════════════════════════════════════════════════════════ -->
+<div class="illus-strip" aria-hidden="true" style="background: var(--ivory);">
+  <div class="illus-strip-item">
+    <img src="assets/tablette4.jpg" alt="" loading="lazy" />
+  </div>
+  <div class="illus-strip-item">
+    <img src="assets/illustration1.png" alt="" loading="lazy" />
+  </div>
+  <div class="illus-strip-item">
+    <img src="assets/illustration3.png" alt="" loading="lazy" />
+  </div>
+  <div class="illus-strip-item">
+    <img src="assets/illustration5.png" alt="" loading="lazy" />
+  </div>
+  <div class="illus-strip-item">
+    <img src="assets/illustration7.png" alt="" loading="lazy" />
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT / RÉSERVATION
+════════════════════════════════════════════════════════════════ -->
+<section id="contact" aria-label="Contact et réservation">
+  <div class="container">
+    <div class="contact-inner">
+
+      <!-- Info side -->
+      <div class="contact-info-side">
+        <span class="section-tag reveal">Me contacter</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          Réservons<br /><em>votre moment</em>
+        </h2>
+        <div class="gold-line reveal reveal-delay-2" style="margin: 1.5rem 0;"></div>
+
+        <p class="section-text reveal reveal-delay-2">
+          La réservation se fait en message privé. Je vous réponds dans les plus brefs délais pour convenir ensemble du meilleur moment.
+        </p>
+
+        <ul class="contact-info-list">
+
+          <li class="contact-item reveal reveal-delay-2">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label">Instagram</span>
+              <a
+                href="https://www.instagram.com/soindouceur_byjohanna"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item-value"
+                style="color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px;"
+              >
+                @soindouceur_byjohanna
+              </a>
+            </div>
+          </li>
+
+          <li class="contact-item reveal reveal-delay-3">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.91-1.12a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label">Téléphone</span>
+              <span class="contact-item-value">À compléter</span>
+            </div>
+          </li>
+
+          <li class="contact-item reveal reveal-delay-4">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label">Zone d'intervention</span>
+              <span class="contact-item-value">Baillargues &amp; alentours</span>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="contact-actions reveal reveal-delay-4">
+          <a
+            href="https://www.instagram.com/soindouceur_byjohanna"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+          </a>
+          <a href="#contact-form-title" class="btn btn-outline">Envoyer un message</a>
+        </div>
+      </div>
+
+      <!-- Form side -->
+      <div class="contact-form-side reveal reveal-delay-2">
+        <h3 class="form-title" id="contact-form-title">Votre demande</h3>
+        <p class="form-subtitle">Décrivez-moi votre envie, je vous réponds rapidement.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-prenom">Prénom</label>
+              <input type="text" id="f-prenom" name="prenom" placeholder="Marie" autocomplete="given-name" required />
+            </div>
+            <div class="form-group">
+              <label for="f-nom">Nom</label>
+              <input type="text" id="f-nom" name="nom" placeholder="Dupont" autocomplete="family-name" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" placeholder="marie@email.com" autocomplete="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="f-soin">Type de soin souhaité</label>
+            <select id="f-soin" name="soin">
+              <option value="">Choisir un soin…</option>
+              <option value="drainage">Drainage lymphatique</option>
+              <option value="kobido">Kobido</option>
+              <option value="soin-beaute">Soin bien-être &amp; beauté</option>
+              <option value="soins-pieds">Soins des pieds</option>
+              <option value="evenementiel">Événementiel</option>
+              <option value="carte-cadeau">Carte cadeau</option>
+              <option value="autre">Autre / à définir</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="f-message">Votre message</label>
+            <textarea id="f-message" name="message" rows="4" placeholder="Dites-moi ce dont vous avez envie…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit">
+            Envoyer ma demande
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <span class="footer-brand-name">Johanna</span>
+        <span class="footer-brand-tag">Esthéticienne · Praticienne Bien-être &amp; Beauté</span>
+        <p class="footer-brand-desc">
+          Des soins pensés pour vous ressourcer, à domicile et pour vos événements — à Baillargues et alentours.
+        </p>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/soindouceur_byjohanna"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de Johanna"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Prestations</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="#prestations">Drainage lymphatique</a></li>
+          <li><a href="#prestations">Kobido</a></li>
+          <li><a href="#prestations">Soins bien-être</a></li>
+          <li><a href="#prestations">Soins des pieds</a></li>
+          <li><a href="#carte-cadeau">Carte cadeau</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Informations</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="#intro">À propos</a></li>
+          <li><a href="#lieux">Zone d'intervention</a></li>
+          <li><a href="#evenementiel">Événementiel</a></li>
+          <li><a href="#contact">Réserver</a></li>
+          <li><a href="https://www.instagram.com/soindouceur_byjohanna" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2024 Johanna – Esthéticienne &amp; Praticienne Bien-être</span>
+      <em>la beauté par le soin</em>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
