@@ -658,15 +658,16 @@ ul { list-style: none; }
 .prestation-card:hover::before { opacity: 1; }
 
 .card-img {
-  aspect-ratio: 4/3;
   overflow: hidden;
   position: relative;
+  background: var(--beige);
 }
 
 .card-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
+  object-fit: contain;
   transition: transform 0.8s ease;
 }
 
