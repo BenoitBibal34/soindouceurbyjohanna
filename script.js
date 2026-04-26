@@ -2,31 +2,7 @@
    SOIN DOUCEUR BY JOHANNA — script.js
    ============================================================ */
 
-/* ── Smooth Scroll (Lenis) ──────────────────────────────────── */
-let lenis;
-
-function initLenis() {
-  if (typeof Lenis === 'undefined') return;
-  lenis = new Lenis({
-    duration: 1.4,
-    easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true,
-    smoothTouch: false,
-  });
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-
-  // Link GSAP ScrollTrigger to Lenis
-  if (typeof ScrollTrigger !== 'undefined') {
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add(time => lenis.raf(time * 1000));
-    gsap.ticker.lagSmoothing(0);
-  }
-}
+/* Scroll natif — libre et sous contrôle total du user */
 
 /* ── Navbar ─────────────────────────────────────────────────── */
 function initNavbar() {
@@ -332,11 +308,7 @@ function initSmoothAnchors() {
       const target = document.querySelector(a.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      if (lenis) {
-        lenis.scrollTo(target, { offset: -80, duration: 1.8 });
-      } else {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+      target.scrollIntoView({ behavior: 'smooth' });
     });
   });
 }
@@ -398,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initForm();
   initCursorGlow();
 
-  // GSAP & Lenis after CDN scripts may load
+  // GSAP after CDN scripts may load
   if (typeof gsap !== 'undefined') {
     initGSAP();
   } else {
@@ -407,11 +379,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (typeof Lenis !== 'undefined') {
-    initLenis();
-  } else {
-    window.addEventListener('load', () => {
-      if (typeof Lenis !== 'undefined') initLenis();
-    });
-  }
 });
