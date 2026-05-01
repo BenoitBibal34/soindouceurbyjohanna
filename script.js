@@ -360,6 +360,37 @@ function initCursorGlow() {
   })();
 }
 
+/* ── Lightbox ───────────────────────────────────────────────── */
+function initLightbox() {
+  const lb      = document.getElementById('lightbox');
+  const lbImg   = document.getElementById('lightbox-img');
+  const lbClose = lb?.querySelector('.lightbox-close');
+  const lbBack  = lb?.querySelector('.lightbox-backdrop');
+  if (!lb || !lbImg) return;
+
+  const open = (src, alt) => {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lbClose?.focus();
+  };
+
+  const close = () => {
+    lb.hidden = true;
+    lbImg.src = '';
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('.lightbox-trigger').forEach(el => {
+    el.addEventListener('click', () => open(el.dataset.src, el.dataset.alt));
+  });
+
+  lbClose?.addEventListener('click', close);
+  lbBack?.addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+}
+
 /* ── Boot ───────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
@@ -369,6 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardTilt();
   initForm();
   initCursorGlow();
+  initLightbox();
 
   // GSAP after CDN scripts may load
   if (typeof gsap !== 'undefined') {
