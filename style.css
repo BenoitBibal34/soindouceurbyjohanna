@@ -1386,6 +1386,310 @@ footer {
 
 .illus-strip-item:hover img { transform: scale(1.07); }
 
+/* ── Après un soin ──────────────────────────────────────────── */
+#apres-soin {
+  padding: 0;
+  background: var(--ivory);
+  overflow: hidden;
+}
+
+.apres-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+}
+
+.apres-visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.apres-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.8s ease;
+}
+
+.apres-visual:hover img { transform: scale(1.03); }
+
+.apres-text {
+  padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.apres-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.apres-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.apres-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.apres-item p {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  font-weight: 300;
+}
+
+.apres-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-style: italic;
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin: 1.5rem 0 2rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--gold-light);
+}
+
+.apres-quote em { color: var(--brown); }
+
+/* ── Événementiel V2 grid ───────────────────────────────────── */
+.event-visual-grid-v2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.evv-main {
+  grid-column: 1 / -1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.evv-sub1,
+.evv-sub2 {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+
+.event-visual-grid-v2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.event-visual-grid-v2 div:hover img { transform: scale(1.04); }
+
+/* ── Hors zone note ─────────────────────────────────────────── */
+.event-horszone {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: var(--ivory);
+  border: 1px solid var(--gold-light);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 2rem;
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.event-horszone svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  stroke: var(--gold);
+}
+
+/* ── Tarifs ─────────────────────────────────────────────────── */
+#tarifs {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.tarifs-header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.tarifs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.tarif-card {
+  background: var(--ivory);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  border: 1px solid var(--beige);
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.tarif-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+.tarif-card:hover {
+  border-color: var(--gold-light);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-4px);
+}
+
+.tarif-card:hover::before { transform: scaleX(1); }
+
+.tarif-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--beige);
+}
+
+.tarif-icon {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--gold-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition-fast);
+}
+
+.tarif-card:hover .tarif-icon {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.tarif-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--gold);
+  transition: stroke var(--transition-fast);
+}
+
+.tarif-card:hover .tarif-icon svg { stroke: var(--white); }
+
+.tarif-cat {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+
+.tarif-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tarif-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed var(--beige);
+}
+
+.tarif-item:last-child { border-bottom: none; }
+
+.tarif-name {
+  font-size: 0.87rem;
+  color: var(--text-mid);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.tarif-duree {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-left: 0.3rem;
+}
+
+.tarif-price {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--gold-dark);
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Note tarifs */
+.tarifs-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--ivory);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1.2rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tarifs-note-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tarifs-note-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--gold);
+}
+
+/* Déco plaquette */
+.tarifs-deco {
+  position: absolute;
+  right: -2rem;
+  bottom: -2rem;
+  width: 220px;
+  opacity: 0.08;
+  pointer-events: none;
+  transform: rotate(5deg);
+}
+
+.tarifs-deco img {
+  width: 100%;
+  height: auto;
+  filter: sepia(1);
+}
+
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .nav-links { display: none; }
@@ -1427,4 +1731,10 @@ footer {
   .illus-strip { flex-wrap: wrap; }
   .illus-strip-item { flex: 0 0 50%; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  .apres-inner { grid-template-columns: 1fr; }
+  .apres-visual { order: 1; }
+  .tarifs-grid { grid-template-columns: 1fr; }
+  .tarifs-deco { display: none; }
+  .event-visual-grid-v2 { grid-template-columns: 1fr; }
+  .evv-sub1, .evv-sub2 { aspect-ratio: 16/9; }
 }
