@@ -1462,36 +1462,41 @@ footer {
 
 .apres-quote em { color: var(--brown); }
 
-/* ── Événementiel V2 grid ───────────────────────────────────── */
-.event-visual-grid-v2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+/* ── Événementiel stack ─────────────────────────────────────── */
+.event-visual-stack {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
-.evv-main {
-  grid-column: 1 / -1;
+.evs-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.evs-item {
   border-radius: var(--radius-lg);
   overflow: hidden;
+  position: relative;
+}
+
+.event-visual-stack > .evs-item {
   aspect-ratio: 4/3;
 }
 
-.evv-sub1,
-.evv-sub2 {
-  border-radius: var(--radius-md);
-  overflow: hidden;
+.evs-row .evs-item {
   aspect-ratio: 3/4;
 }
 
-.event-visual-grid-v2 img {
+.evs-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.7s ease;
 }
 
-.event-visual-grid-v2 div:hover img { transform: scale(1.04); }
+.evs-item:hover img { transform: scale(1.03); }
 
 /* ── Hors zone note ─────────────────────────────────────────── */
 .event-horszone {
