@@ -1524,15 +1524,15 @@ footer {
 
 /* ── Lightbox ────────────────────────────────────────────────── */
 #lightbox {
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 10000;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#lightbox[hidden] { display: none; }
+#lightbox.lb-open { display: flex; }
 
 .lightbox-backdrop {
   position: absolute;

@@ -371,13 +371,13 @@ function initLightbox() {
   const open = (src, alt) => {
     lbImg.src = src;
     lbImg.alt = alt || '';
-    lb.hidden = false;
+    lb.classList.add('lb-open');
     document.body.style.overflow = 'hidden';
     lbClose?.focus();
   };
 
   const close = () => {
-    lb.hidden = true;
+    lb.classList.remove('lb-open');
     lbImg.src = '';
     document.body.style.overflow = '';
   };
