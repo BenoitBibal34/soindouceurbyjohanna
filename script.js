@@ -318,20 +318,22 @@ function initSmoothAnchors() {
 
 /* ── Form feedback ──────────────────────────────────────────── */
 function initForm() {
-  const form = document.getElementById('contact-form');
-  if (!form) return;
+  const params = new URLSearchParams(window.location.search);
+  const btn = document.querySelector('.form-submit');
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('.form-submit');
+  if (params.get('sent') === '1' && btn) {
     btn.textContent = 'Message envoyé ✓';
     btn.style.background = '#5a8a5a';
     setTimeout(() => {
       btn.textContent = 'Envoyer ma demande';
       btn.style.background = '';
-      form.reset();
-    }, 3000);
-  });
+    }, 4000);
+  }
+
+  if (params.get('error') === '1' && btn) {
+    btn.textContent = 'Erreur — réessayez';
+    btn.style.background = '#a05050';
+  }
 }
 
 /* ── Cursor glow (desktop only) ─────────────────────────────── */
