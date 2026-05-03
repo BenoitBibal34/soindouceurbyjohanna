@@ -243,12 +243,10 @@ ul { list-style: none; }
 #navbar:not(.scrolled) .nav-logo-name { color: var(--white); }
 
 .nav-logo-sub {
-  font-family: var(--font-sans);
-  font-size: 0.62rem;
-  font-weight: 400;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  font-family: var(--font-script);
+  font-size: 0.95rem;
   color: var(--gold);
+  line-height: 1;
 }
 
 .nav-links {
