@@ -1184,6 +1184,65 @@ ul { list-style: none; }
 
 .form-submit { width: 100%; justify-content: center; margin-top: 1rem; }
 
+/* ── Bandeau signature ───────────────────────────────────────── */
+.signature-band {
+  background: var(--text-dark);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.signature-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(201,169,110,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.signature-band-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.signature-band-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.signature-band-sep {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.signature-band-slogan {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.signature-band-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--gold-light);
+  line-height: 1;
+}
+
 /* ── Footer ─────────────────────────────────────────────────── */
 footer {
   background: var(--text-dark);
