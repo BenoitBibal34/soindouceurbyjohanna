@@ -38,12 +38,15 @@ function initHero() {
   }
 
   const eyebrow  = document.querySelector('.hero-eyebrow');
+  const sep      = document.querySelector('.hero-sep');
+  const name     = document.querySelector('.hero-name');
+  const tagline  = document.querySelector('.hero-tagline');
   const title    = document.querySelector('.hero-title');
   const subtitle = document.querySelector('.hero-subtitle');
   const actions  = document.querySelector('.hero-actions');
   const hint     = document.querySelector('.hero-scroll-hint');
 
-  const elements = [eyebrow, title, subtitle, actions, hint].filter(Boolean);
+  const elements = [eyebrow, sep, name, tagline, title, subtitle, actions, hint].filter(Boolean);
 
   elements.forEach((el, i) => {
     setTimeout(() => {
