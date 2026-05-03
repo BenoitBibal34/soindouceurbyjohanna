@@ -318,22 +318,41 @@ function initSmoothAnchors() {
 
 /* ── Form feedback ──────────────────────────────────────────── */
 function initForm() {
-  const params = new URLSearchParams(window.location.search);
-  const btn = document.querySelector('.form-submit');
+  const form = document.getElementById('contact-form');
+  if (!form) return;
 
-  if (params.get('sent') === '1' && btn) {
-    btn.textContent = 'Message envoyé ✓';
-    btn.style.background = '#5a8a5a';
-    setTimeout(() => {
-      btn.textContent = 'Envoyer ma demande';
-      btn.style.background = '';
-    }, 4000);
-  }
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('.form-submit');
+    const original = btn.textContent;
+    btn.textContent = 'Envoi en cours…';
+    btn.disabled = true;
 
-  if (params.get('error') === '1' && btn) {
-    btn.textContent = 'Erreur — réessayez';
-    btn.style.background = '#a05050';
-  }
+    try {
+      const res  = await fetch('send.php', { method: 'POST', body: new FormData(form) });
+      const data = await res.json();
+      if (data.success) {
+        btn.textContent = 'Message envoyé ✓';
+        btn.style.background = '#5a8a5a';
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
+      } else {
+        btn.textContent = 'Erreur — réessayez';
+        btn.style.background = '#a05050';
+        btn.disabled = false;
+        setTimeout(() => { btn.textContent = original; btn.style.background = ''; }, 4000);
+      }
+    } catch {
+      btn.textContent = 'Erreur réseau';
+      btn.style.background = '#a05050';
+      btn.disabled = false;
+      setTimeout(() => { btn.textContent = original; btn.style.background = ''; }, 4000);
+    }
+  });
 }
 
 /* ── Cursor glow (desktop only) ─────────────────────────────── */

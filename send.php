@@ -1,6 +1,8 @@
 <?php
+header('Content-Type: application/json; charset=UTF-8');
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: index.html');
+    echo json_encode(['success' => false, 'error' => 'method']);
     exit;
 }
 
@@ -12,7 +14,7 @@ $soin    = htmlspecialchars(strip_tags(trim($_POST['soin'] ?? '')));
 $message = htmlspecialchars(strip_tags(trim($_POST['message'] ?? '')));
 
 if (empty($prenom) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header('Location: index.html#contact');
+    echo json_encode(['success' => false, 'error' => 'invalid']);
     exit;
 }
 
@@ -30,9 +32,4 @@ $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
 $sent = mail($to, $subject, $body, $headers);
 
-if ($sent) {
-    header('Location: index.html?sent=1#contact');
-} else {
-    header('Location: index.html?error=1#contact');
-}
-exit;
+echo json_encode(['success' => $sent]);
