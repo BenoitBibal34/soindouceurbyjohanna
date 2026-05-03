@@ -340,6 +340,10 @@ function initForm() {
           btn.style.background = '';
           btn.disabled = false;
         }, 4000);
+      } else if (data.error === 'rate_limit') {
+        btn.textContent = 'Trop de tentatives — réessayez dans 1h';
+        btn.style.background = '#a05050';
+        setTimeout(() => { btn.textContent = original; btn.style.background = ''; btn.disabled = false; }, 5000);
       } else {
         btn.textContent = 'Erreur — réessayez';
         btn.style.background = '#a05050';
