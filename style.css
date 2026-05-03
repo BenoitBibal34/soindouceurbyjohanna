@@ -243,8 +243,11 @@ ul { list-style: none; }
 #navbar:not(.scrolled) .nav-logo-name { color: var(--white); }
 
 .nav-logo-sub {
-  font-family: var(--font-script);
-  font-size: 0.95rem;
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   color: var(--gold);
   line-height: 1;
 }
