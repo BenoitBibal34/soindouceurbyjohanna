@@ -1402,6 +1402,21 @@ footer {
   font-size: 1rem;
 }
 
+.footer-credits {
+  color: rgba(255,255,255,0.25);
+  font-size: 0.7rem;
+}
+
+.footer-credits a {
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-credits a:hover {
+  color: var(--gold);
+}
+
 /* ── Mobile menu overlay ────────────────────────────────────── */
 .mobile-menu {
   position: fixed;
